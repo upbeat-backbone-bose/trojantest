@@ -17,8 +17,11 @@ docker run --restart=always \
 
 
 #password  trojan密码
+
 #email     申请ssl证书邮箱
-#wz        是否使用自己域名开关 ture开 false关
+
+#wz        是否使用自己域名开关 ture开 false关  不开启默认使用nip.io域名
+
 #domain    填写自己的域名
 
 重启trojan容器代码
