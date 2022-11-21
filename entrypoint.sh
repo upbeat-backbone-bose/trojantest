@@ -93,7 +93,7 @@ ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 openrc boot
 /etc/init.d/caddy start
 echo "当前设置的trojan密码为$password"
-echo "当前设置的trojan域名为yuming"
+echo "当前设置的trojan域名为$yuming"
 echo "当前设置申请ssl邮箱为$email"
 sing-box run -c /singbox/config.json
 tail -f /dev/null
