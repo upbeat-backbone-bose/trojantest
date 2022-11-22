@@ -7,6 +7,7 @@ docker run --restart=always \
   -d --name trojan \
   --privileged=true \
   -p 443:443 \
+  -p 80:80 \
   -v /docker/singbox:/singbox \
   -e password=123456 \
   -e email=10086@baidu.com \
