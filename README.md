@@ -1,6 +1,5 @@
 # trojan
 
-```
 # 推荐部署容器命令
 ``` sh
 docker run --restart=always \
