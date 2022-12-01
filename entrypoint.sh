@@ -81,15 +81,7 @@ cat <<EOF> /etc/caddy/Caddyfile
         close
     }
 }
-
-:80 {
-    redir https://{host}{uri} permanent
-}
 EOF
-
-#修复alpine没有ld-linux-x86-64.so.2依赖
-mkdir /lib64
-ln -s /lib/libc.musl-x86_64.so.1 /lib64/ld-linux-x86-64.so.2
 openrc boot
 /etc/init.d/caddy start
 echo "当前设置的trojan密码为$password"
