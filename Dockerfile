@@ -6,7 +6,7 @@ ENV password=123456 \
 ADD entrypoint.sh /entrypoint.sh
 RUN set -ex \
         && apk update -f && apk upgrade \
-        && apk --no-cache add -f ca-certificates tzdata wget curl bash go openrc caddy caddy-openrc\
+        && apk --no-cache add -f ca-certificates tzdata wget curl bash go openrc caddy caddy-openrc \
         && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone \
         && go install -v -tags with_ech,with_utls,with_acme github.com/sagernet/sing-box/cmd/sing-box@dev-next \
@@ -16,5 +16,5 @@ RUN set -ex \
         && mkdir /singbox \
         && rm -rf /var/cache/apk/*
 VOLUME /singbox
-EXPOSE 80 443
+EXPOSE 443
 ENTRYPOINT /entrypoint.sh
