@@ -14,6 +14,7 @@ RUN set -ex \
 	&& chmod +x /usr/bin/sing-box \
 	&& chmod +x /entrypoint.sh \
         && mkdir /singbox \
+	&& apk del go \
         && rm -rf /var/cache/apk/*
 VOLUME /singbox
 EXPOSE 443
